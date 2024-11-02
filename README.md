@@ -61,6 +61,7 @@ OR run a Chainbase AVS operator node on testnet (no restrictions):
 ```
 cd chainbase-avs-setup/holesky
 ```
+
 Set up the environment file:
 ```
 cp .env.example .env
@@ -76,12 +77,12 @@ OPERATOR_ADDRESS=yourECDSAKeyAddress
 NODE_SOCKET=yourNodeSocket
 OPERATOR_NAME=yourOperatorName
 ```
-Use the command eigenlayer operator keys list to retrieve information about your ECDSA and BLS key paths and operator address.
 
+Use the command eigenlayer operator keys list to retrieve information about your ECDSA and BLS key paths and operator address.
 - OPERATOR_ADDRESS: Set to your operator address (must match your ECDSA key address).
 - NODE_SOCKET: Set to your server’s public IP address (format: <your_server_public_ip>:8011).
-Important:
 
+Important:
 Ensure your server’s public IP is internet-accessible.
 Verify that port 8011 is open and properly configured in your firewall settings.
 Set execution permissions for the script:
@@ -90,31 +91,35 @@ chmod +x ./chainbase-avs.sh
 ​```
 Operating the Chainbase AVS
 ​
-Register as an Operator
+## Register as an Operator
 Run the following command to register as an operator:
 
 ```
 ./chainbase-avs.sh register
 ​```
 
-Run Node
-
+## Run Node
 Run the following command to startup node:
 
 ```
 ./chainbase-avs.sh run
 ​```
-Test Node
+
+## Test Node
 Run the following command to test node:
 
-```./chainbase-avs.sh test```
+```
+./chainbase-avs.sh test
+```
 
 If you see the output All systems are working for your manuscript node in the command line output, it indicates that your node is running correctly.
 ​
 Update Node socket
 If your server’s public IP address is changed after you register as an operator, you need to update the node socket. Configure NODE_SOCKET in .env file, then run the following command:
 
-```./chainbase-avs.sh socket```
+```
+./chainbase-avs.sh socket
+```
 ​
 Update Node version
 Run the following command to update node version:
@@ -128,12 +133,11 @@ Run the following command to update node version:
 Monitor Logs
 View container logs using any of these commands:
 
-```
-docker compose logs -f
-docker compose logs -f <container_name>
-docker logs -f <container_id>
-​```
 
-Dashboard
+```docker compose logs -f
+docker compose logs -f <container_name>
+docker logs -f <container_id> ```
+
+## Dashboard
 You can visit <your_server_public_ip>:3010 on browser to view the dashboard to confirm the status of your node.If you are unable to access the page in your browser, please verify that port 3010 on your server is open and properly configured in firewall settings.
 
