@@ -125,7 +125,6 @@ Run the following command to update node version:
 ​```
 
 ## Monitor Logs: View container logs using any of these commands:
-
 ```
 docker compose logs -f
 docker compose logs -f <container_name>
