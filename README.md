@@ -101,9 +101,7 @@ Run the following command to register as an operator:
 ## Run Node
 Run the following command to startup node:
 
-```
-./chainbase-avs.sh run
-​```
+``` ./chainbase-avs.sh run ```
 
 ## Test Node
 Run the following command to test node:
@@ -112,16 +110,12 @@ Run the following command to test node:
 ./chainbase-avs.sh test
 ```
 
-If you see the output All systems are working for your manuscript node in the command line output, it indicates that your node is running correctly.
-​
-Update Node socket
-If your server’s public IP address is changed after you register as an operator, you need to update the node socket. Configure NODE_SOCKET in .env file, then run the following command:
+- If you see the output All systems are working for your manuscript node in the command line output, it indicates that your node is running correctly.
+- ​Update Node socket: If your server’s public IP address is changed after you register as an operator, you need to update the node socket. Configure NODE_SOCKET in .env file, then run the following command:
 
-```
-./chainbase-avs.sh socket
-```
+``` ./chainbase-avs.sh socket ```
 ​
-Update Node version
+## Update Node version
 Run the following command to update node version:
 
 ```
@@ -130,13 +124,13 @@ Run the following command to update node version:
 ./chainbase-avs.sh run
 ​```
 
-Monitor Logs
-View container logs using any of these commands:
+## Monitor Logs: View container logs using any of these commands:
 
-
-```docker compose logs -f
+```
+docker compose logs -f
 docker compose logs -f <container_name>
-docker logs -f <container_id> ```
+docker logs -f <container_id>
+```
 
 ## Dashboard
 You can visit <your_server_public_ip>:3010 on browser to view the dashboard to confirm the status of your node.If you are unable to access the page in your browser, please verify that port 3010 on your server is open and properly configured in firewall settings.
