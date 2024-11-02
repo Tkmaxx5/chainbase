@@ -118,11 +118,10 @@ Run the following command to test node:
 ## Update Node version
 Run the following command to update node version:
 
-```
 ./chainbase-avs.sh stop
 ./chainbase-avs.sh update
 ./chainbase-avs.sh run
-​```
+
 
 ## Monitor Logs: View container logs using any of these commands:
 ```
